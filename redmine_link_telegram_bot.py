@@ -25,7 +25,7 @@ def compose_message(issue_urls):
             issue = redmine.issue.get(issue_url[1])
             message += '[%s](%s) - %s\n' % (issue_url[1], issue_url[0], issue.subject)
         except ForbiddenError:
-            message += 'Sorry, task "%s" is either forbidden to me or not found at all.' % issue_url[1] 
+            message += 'Sorry, task "%s" is either forbidden to me or not found at all.\n' % issue_url[1] 
     return message
 
 
